@@ -39,8 +39,4 @@
       </Compile>
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Days\Year2025\" />
-    </ItemGroup>
-
 </Project>
