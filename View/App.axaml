@@ -1,0 +1,22 @@
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="AdventOfCode.View.App"
+             RequestedThemeVariant="Dark">
+    <Application.Styles>
+        <FluentTheme />
+        
+        <Style Selector="ComboBox">
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style Selector="DockPanel">
+            <Setter Property="LastChildFill" Value="True" />
+        </Style>
+        <Style Selector="TextBox">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+        <Style Selector="Button">
+            <Setter Property="Margin" Value="5" />
+        </Style>
+    </Application.Styles>
+</Application>

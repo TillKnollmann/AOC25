@@ -1,0 +1,11 @@
+﻿<Solution>
+  <Folder Name="/Misc/">
+    <File Path=".gitattributes" />
+    <File Path=".gitignore" />
+    <File Path="Directory.build.props" />
+  </Folder>
+  <Project Path="Main\Main.csproj" Type="C#" />
+  <Project Path="UnitTestGenerator\UnitTestGenerator.csproj" Type="C#" />
+  <Project Path="UnitTests\UnitTests.csproj" Type="C#" />
+  <Project Path="View/View.csproj" />
+</Solution>

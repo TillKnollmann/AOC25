@@ -1,0 +1,51 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:AdventOfCode.View.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="AdventOfCode.View.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="Advent Of Code UI">
+
+    <Design.DataContext>
+        <viewModels:MainWindowViewModel/>
+    </Design.DataContext>
+    
+    <DockPanel>
+        <Grid
+            DockPanel.Dock="Top"
+            ColumnDefinitions="*,*,*">
+            <ComboBox 
+                Grid.Column="0" 
+                ItemsSource="{Binding Days.Years}"
+                SelectedItem="{Binding Days.SelectedYear}" />
+            <ComboBox
+                Grid.Column="1"
+                ItemsSource="{Binding Days.Days}"
+                SelectedItem="{Binding Days.SelectedDay}" />
+            <ComboBox 
+                Grid.Column="2" 
+                ItemsSource="{Binding Days.Samples}"
+                SelectedItem="{Binding Days.SelectedDayInstance}"
+                DisplayMemberBinding="{Binding SampleNumber}" />
+        </Grid>
+        <ContentControl
+            DockPanel.Dock="Bottom"
+            Content="{Binding Days.SelectedDayInstance}">
+            <ContentControl.DataTemplates>
+                <DataTemplate DataType="viewModels:DayViewModel">
+                   <DockPanel VerticalAlignment="Stretch">
+                       <Grid DockPanel.Dock="Bottom" ColumnDefinitions="*,Auto" RowDefinitions="Auto,Auto">
+                           <TextBox Grid.Column="0" Grid.Row="0" Text="{Binding FirstPart.Solution}" IsVisible="{Binding FirstPart.Solved}" />
+                           <Button Grid.Column="1" Grid.Row="0" Content="Solve First Part" Command="{Binding FirstPart.SolvePart}" HorizontalAlignment="Stretch" />
+                           <TextBox Grid.Column="0" Grid.Row="1" Text="{Binding SecondPart.Solution}" IsVisible="{Binding SecondPart.Solved}" />
+                           <Button Grid.Column="1" Grid.Row="1" Content="Solve Second Part" Command="{Binding SecondPart.SolvePart}" />
+                       </Grid>
+                       <TextBox DockPanel.Dock="Top" Text="{Binding Input}" />
+                   </DockPanel>
+                </DataTemplate>
+            </ContentControl.DataTemplates>
+        </ContentControl>
+    </DockPanel>
+</Window>

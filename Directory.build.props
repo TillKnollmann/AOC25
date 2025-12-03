@@ -1,0 +1,23 @@
+<Project>
+  <!-- General -->
+  <PropertyGroup>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+    <Version>$(MinVerVersion)</Version>
+    <DisableTransitiveProjectReferences>true</DisableTransitiveProjectReferences>
+    <TargetFramework>net10.0</TargetFramework>
+    <LangVersion>14.0</LangVersion>
+    <Nullable>enable</Nullable>
+    <WarningsAsErrors>nullable</WarningsAsErrors>
+    <Authors>Yeah69</Authors>
+    <PackageIcon>Yeah69Logo_256.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\Icon\Yeah69Logo_256.png">
+      <Pack>true</Pack>
+      <PackagePath/>
+    </None>
+    <None Include="..\README.md" Pack="true" PackagePath="\"/>
+  </ItemGroup>
+</Project>

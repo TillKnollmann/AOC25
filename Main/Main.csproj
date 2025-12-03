@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>AdventOfCodeCSharp</AssemblyName>
+        <RootNamespace>AdventOfCode</RootNamespace>
+        
+        <EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+        <CompilerGeneratedFilesOutputPath>$(BaseIntermediateOutputPath)\GeneratedFiles</CompilerGeneratedFilesOutputPath>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="MrMeeseeks.DIE" Version="3.3.8" PrivateAssets="all" />
+      <PackageReference Include="MrMeeseeks.DIE.UserUtility" Version="3.0.1" PrivateAssets="all" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Inputs.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Inputs.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Solutions.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>Solutions.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="Inputs.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Inputs.resx</DependentUpon>
+      </Compile>
+      <Compile Update="Solutions.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>Solutions.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Days\Year2025\" />
+    </ItemGroup>
+
+</Project>
