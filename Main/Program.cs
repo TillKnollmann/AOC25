@@ -26,7 +26,6 @@ namespace AdventOfCode
         public void Run()
         {
             _dayRunner.Run();
-            Console.WriteLine("Hello, World!");
         }
     }
 }
