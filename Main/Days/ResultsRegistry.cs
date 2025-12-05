@@ -1,4 +1,3 @@
-using System.Collections.Immutable;
 using MrMeeseeks.DIE.UserUtility;
 
 namespace AdventOfCode.Days;
@@ -43,7 +42,7 @@ internal class ResultsRegistry : IResultsRegistry, IResultsPrinter, IScopeInstan
                         var padLeftSize = labelSize - day.GetShortDayLabelText(stage).Length;
                         day.PrintShortDayLabel(stage);
                         Console.Write("".PadLeft(padLeftSize, ' '));
-                        if (chunks.Count > 0 || chunk.Last().Day != day)
+                        if (chunks.Count > 0 || chunk.Last().Day != day || chunk.Last().Stage != stage)
                             Console.Write(", ");
                     }
                     Console.WriteLine();
