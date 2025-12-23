@@ -11,6 +11,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="LpSolveDotNet.Native.win-x64" Version="4.1.0" />
       <PackageReference Include="MrMeeseeks.DIE" Version="3.3.8" PrivateAssets="all" />
       <PackageReference Include="MrMeeseeks.DIE.UserUtility" Version="3.0.1" PrivateAssets="all" />
     </ItemGroup>
